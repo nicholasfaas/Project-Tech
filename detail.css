@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  perspective: 100em;
+}
+
+body > img {
+  position: sticky;
+  top: 7em;
+  transition: transform .1s;
+  display: block;
+  margin: 2em auto;
+  z-index: -1;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  padding: 0 4em;
+  /* box-shadow: 0 0 .6em .2em #000; */
+}
+
+
+header nav a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  color: #f0f0f0;
+  margin-left: 2em;
+}
+
+header form {
+  flex-grow: 1;
+  text-align: center;
+}
+
+header form input[type="text"] {
+  padding: 0 1em;
+  height: 3em;
+  width: 50%; /* Aanpassen op basis van voorkeur */
+  border-radius: .5em;
+  border-style: none;
+  background-color: #111;
+  color: #f0f0f0;
+}
+
+header a img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: .2em;
+}
+
+.section-title {
+  text-align: center;
+  padding: 1em 0;
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  position: sticky;
+  top: 5em;
+}
+
+.section-title h2 {
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+  color: #f0f0f0;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, calc(100%/6 - 5em/6)); /* 6 kolommen, elk 12em breed */
+  gap: 1em; /* Zowel verticale als horizontale spacing is 1em */
+  justify-content: center;
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  padding: 0 4em;
+}
+
+.grid-column a {
+  display: block; /* Maakt de <a> tag geschikt voor marge toepassing */
+  margin-bottom: 1em; /* Dezelfde marge als de afbeeldingen */
+}
+
+.grid-column a img {
+  margin-bottom: 0; /* Verwijder de marge van de afbeelding zelf om dubbele marges te voorkomen */
+}
+
+.grid-column img {
+  width: 100%; /* Zorgt ervoor dat afbeeldingen de container vullen */
+  margin-bottom: 1em; /* Verticale spacing tussen afbeeldingen */
+}
+
+.grid-column img:last-child {
+  margin-bottom: 0; /* Verwijdert de ondermarge voor de laatste afbeelding in elke kolom */
+}

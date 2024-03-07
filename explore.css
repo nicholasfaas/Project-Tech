@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  padding: 0 4em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+}
+
+nav a, nav form {
+  color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+nav form {
+  flex-grow: 1; /* Zorgt ervoor dat de zoekbalk naar het midden wordt geduwd */
+  display: flex;
+  justify-content: center; /* Centreert de zoekbalk binnen zijn container */
+}
+
+nav form input[type="text"] {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #111;
+  color: #f0f0f0;
+  width: 100%;
+  max-width: 300px; /* Beperkt de breedte van de zoekbalk */
+}
+
+nav a img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, calc(100%/6 - 5em/6));
+  gap: 1em;
+  justify-content: center;
+  background-image: url(background.jpg), linear-gradient(#0009 0 0);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  padding: 0em 4em;
+}
+
+.grid-column a {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.grid-column a img {
+  margin-bottom: 0;
+}
+
+.grid-column img {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.grid-column img:last-child {
+  margin-bottom: 0;
+}
